@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"><!--Designa el tipo de juego de caracteres que se usara, en este caso UTF-8-->
         <title>Clase 7</title>
         <style>
             #container {
@@ -22,16 +22,16 @@
         </style>
     </head>
     <body>
-        <section id="container">
-            <div class="row">
+        <section id="container"> <!--Es un id por lo tanto tiene mayor prioridad-->
+            <div class="row"><!--Es un div el cual es class, es de menor prioridad en comparacion a id-->
                 <p>Ejemplo de selector profundo</p>
             </div>
-            <p>Ejemplo de selector por ID</p>
+            <p>Ejemplo de selector por ID</p><!--Es independiente de el class row pero no del id container-->
         </section>
 
-        <div class="row">
+        <div class="row"><!--Igual que el otro div, pertenece a la clase row, asi que tambien le afecta lo que al primero-->
             <p>Ejemplo de selector por clase</p>
-            <div style="height: 20px; width: 50px;"></div>
+            <div style="height: 20px; width: 50px;"></div><!--Da una altura de 20px y un ancho de 50px-->
         </div>
     </body>
 </html>
