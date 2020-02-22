@@ -1,2 +1,2 @@
-# ejercicios
-Tareas y ejercicios terminados
+# FSJS-Bloque3
+Ejercicios de JS para el curso FSJS
