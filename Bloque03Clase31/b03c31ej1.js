@@ -12,63 +12,71 @@
 
 const avengers = [
     {
+        "nombre": "Superhéroe",
+        "identidad": "Identidad",
+        "superpoder": "Poder",
+        "primerapeli": "Película"
+    }, {
         "nombre": "Iron Man",
         "identidad": "Tony Stark",
         "superpoder": "Super Traje",
-        "primerpelicula": "Iron Man 1"
-    },
-    {
-        "nombre": "Capitan America",
+        "primerapeli": "Iron Man 1"
+    }, {
+        "nombre": "Captain America",
         "identidad": "Steve Rogers",
-        "superpoder": "Super Soldado",
-        "primerpelicula": "Capitan America 1"
-    },
-    {
-        "nombre": "Thor",
-        "identidad": "Thor Odinson",
-        "superpoder": "Poder del Rayo",
-        "primerpelicula": "Thor 1"
-    },
-    {
-        "nombre": "Black Widow",
-        "identidad": "Natasha Romanov",
-        "superpoder": "Combate",
-        "primerpelicula": "Avengers 1"
-    },
-    {
+        "superpoder": "Escudo",
+        "primerapeli": "Captain America 1"
+    }, {
         "nombre": "Hulk",
         "identidad": "Bruce Banner",
-        "superpoder": "Fuerza Gamma",
-        "primerpelicula": "Hulk 1"
+        "superpoder": "Super Fuerza",
+        "primerapeli": "Hulk"
+    }, {
+        "nombre": "Thor",
+        "identidad": "Thor",
+        "superpoder": "Martillo",
+        "primerapeli": "Thor 1"
+    }, {
+        "nombre": "Black Widow",
+        "identidad": "Natasha Romanoff",
+        "superpoder": "Combate",
+        "primerapeli": "Iron Man 2"
     }
 ];
 
 const mitabla = document.createElement("table");
-const headerRow = document.createElement("th");
+mitabla.style.setProperty("border", "5px solid red");
 
-
+const tableRows = [];
 
 let row, col, txt;
-const tableRows = [];
+
 for (let i = 0; i < avengers.length; i++) {
 
     row = document.createElement("tr");
+    row.style.setProperty("border", "5px solid red");
     tableRows.push(row);
 
     for (let prop in avengers[i]) {
 
-        col = document.createElement("td");
+        if (i === 0) {
+            col = document.createElement("th");
+        } else {
+            col = document.createElement("td");
+        }
+
+        col.style.setProperty("border", "5px solid red");
         txt = document.createTextNode(avengers[i][prop]);
         col.appendChild(txt);
         tableRows[i].appendChild(col);
     }
-}
-for (let tablerow of tableRows) {
-    mitabla.appendChild(tablerow);
+
+    mitabla.appendChild(tableRows[i]);
 }
 
-    const el_body = document.getElementById("body");
+const el_body = document.getElementById("body");
 el_body.appendChild(mitabla);
+
 //tu código va aquí ^^^
 
 //eof
