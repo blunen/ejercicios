@@ -14,7 +14,6 @@
     Si la calificación tiene decimales, contrólalos de alguna manera que te parezca adecuada.
 */
 
-let calif = document.getElementById("term1");
 let r = document.getElementById("divresultados");
 
 function messageClick() {
@@ -23,6 +22,19 @@ function messageClick() {
     //usa r.innerHTML para colocar el resultado en pantalla
 
     //tu código va aquí vvv
+    let calif = document.getElementById("term1");
+    calif = Number(calif.value);
+    if (calif >= 0 && calif < 10){
+        r.innerHTML = "Vete a turismo";
+    }else if(calif >= 10 && calif < 60){
+        r.innerHTML = "Tronaste";
+    }else if (calif >= 60 && calif < 70){
+        r.innerHTML = "Panzaste";
+    }else if (calif >= 70 && calif < 90){
+        r.innerHTML = "Ya eres libre";
+    }else if (calif >= 90 && calif <= 100){
+        r.innerHTML = "Nerd";
+    }else{ r.innerHTML = "Valor invalido"}
 
     //tu código va aquí ^^^
 }

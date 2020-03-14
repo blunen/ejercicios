@@ -15,13 +15,18 @@ let r = document.getElementById("divresultados");
 
 function messageClick() {
 
-    a = term1.value;
-    b = term2.value;
+    const a = Number (term1.value);
+    const b = Number (term2.value);
 
     //asigna r.innerHTML al valor que quieras imprimir en pantalla.
 
     //tu código va aquí vvv
-
+    if (a>b) {
+        console.log("Valor 1 es mayor")
+    }else if{
+        (b>a)
+        consolre.log(Valor 2 es mayor)
+    }
     //tu código va aquí ^^^
 }
 
